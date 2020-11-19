@@ -22,12 +22,6 @@ class Contact
         this.phone=params[6];
         this.email=params[7];
     }
-
-    //method
-    Print(contact)
-    {
-        return contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email;
-    }
 }
 
 let addressBook=new Array();
