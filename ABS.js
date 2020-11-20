@@ -123,3 +123,9 @@ addressBook.forEach((contact)=>
 {
     console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
 });
+
+//UC8 Ability to search Person in a particularCity or State
+console.log('-------------');
+let place='City';
+addressBook.forEach((contact)=>{if(contact.city==place || contact.state==place) console.log(contact);});
+console.log('-------------');
