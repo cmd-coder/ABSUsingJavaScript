@@ -79,9 +79,9 @@ class Contact
 }
 
 let addressBook=new Array();
-addressBook.push(new Contact('First','Last', 'Address', 'City','State','455 645','7889455678','email@email.com'));
+addressBook.push(new Contact('First','Last', 'Address', 'Cityold','Stateold','455645','7889455678','email@email.com'));
 addressBook.push(new Contact('Gautam','Singh', 'Address2', 'City2','State2','455 646','7889455679','email2@email.com'));
-addressBook.push(new Contact('Firstname','Lastname', 'Address3', 'City3','State3','455647','7889455670','email3@email.com'));
+addressBook.push(new Contact('Afirstname','Lastname', 'Address3', 'Citynew','Statenew','455647','7889455670','email3@email.com'));
 addressBook.forEach((contact)=>
 {
     console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
@@ -113,7 +113,7 @@ console.log('The count of elements is: '+countOfElements);
 
 //UC7 Ability to ensure there is no Duplicate Entry of the same Person in the Address Book
 console.log('-------------');
-let newContact=new Contact('Firstone','Last', 'Address', 'City','State','455 645','7889455678','email@email.com');
+let newContact=new Contact('Firstone','Last', 'Address', 'Cityold','Stateold','455645','7889455678','email@email.com');
 if(addressBook.find(contact=>{return contact.firstName=='First';}).firstName!='Firstone')
     addressBook.push(newContact);
 else
@@ -145,7 +145,22 @@ console.log('-------------');
 
 //UC11 Ability to sort the entries in the address book alphabetically by Person’s name
 console.log('-------------');
-addressBook.sort((contact1, contact2)=>contact1.firstName-contact2.firstName);
+addressBook.sort((contact1, contact2)=>contact1.firstName<contact2.firstName?-1:contact1.firstName>contact2.firstName?1:0);
 console.log('Sorting by name');
+console.log(addressBook);
+console.log('-------------');
+
+//UC12 Ability to sort the entries in the address book by City, State, or Zip
+console.log('-------------');
+addressBook.sort((contact1, contact2)=>contact1.city<contact2.city?-1:contact1.city>contact2.city?1:0);
+console.log('Sorting by city');
+console.log(addressBook);
+
+addressBook.sort((contact1, contact2)=>contact1.state<contact2.state?-1:contact1.state>contact2.state?1:0);
+console.log('Sorting by state');
+console.log(addressBook);
+
+addressBook.sort((contact1, contact2)=>contact1.zip<contact2.zip?-1:contact1.zip>contact2.zip?1:0);
+console.log('Sorting by zip');
 console.log(addressBook);
 console.log('-------------');
