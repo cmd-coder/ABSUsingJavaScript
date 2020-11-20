@@ -80,8 +80,18 @@ class Contact
 
 let addressBook=new Array();
 addressBook.push(new Contact('First','Last', 'Address', 'City','State','455 645','7889455678','email@email.com'));
-addressBook.push(new Contact('First','Last', 'Address2', 'City2','State2','455 646','7889455679','email2@email.com'));
-addressBook.push(new Contact('First','Last', 'Address3', 'City3','State3','455647','7889455670','email3@email.com'));
+addressBook.push(new Contact('Gautam','Singh', 'Address2', 'City2','State2','455 646','7889455679','email2@email.com'));
+addressBook.push(new Contact('Firstname','Lastname', 'Address3', 'City3','State3','455647','7889455670','email3@email.com'));
+addressBook.forEach((contact)=>
+{
+    console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
+});
+
+//UC4 Ability to find existing contact person using their name and edit it
+addressBook.filter((contact)=>{if(contact.firstName=="Gautam") contact.firstName='Gautama';});
+//editContact.firstName='Gautama';
+console.log('Changed \'Gautam\' to \'Gautama\'');
+console.log('-------------');
 addressBook.forEach((contact)=>
 {
     console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
