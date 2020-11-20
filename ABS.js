@@ -89,8 +89,18 @@ addressBook.forEach((contact)=>
 
 //UC4 Ability to find existing contact person using their name and edit it
 addressBook.filter((contact)=>{if(contact.firstName=="Gautam") contact.firstName='Gautama';});
-//editContact.firstName='Gautama';
+console.log('-------------');
 console.log('Changed \'Gautam\' to \'Gautama\'');
+console.log('-------------');
+addressBook.forEach((contact)=>
+{
+    console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
+});
+
+//UC5 Ability to find a person with name delete it from the array
+addressBook=addressBook.filter((contact)=>{if(contact.firstName!="Gautama") return contact;});
+console.log('-------------');
+console.log('Deleted contact named \'Gautama\'');
 console.log('-------------');
 addressBook.forEach((contact)=>
 {
