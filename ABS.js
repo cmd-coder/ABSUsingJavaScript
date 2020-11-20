@@ -86,21 +86,3 @@ addressBook.forEach((contact)=>
 {
     console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
 });
-
-
-
-/*function takeInput()
-  {
-    const readline = require('readline').createInterface({
-        input: process.stdin,
-        output: process.stdout
-      });
-       
-      readline.question('Enter Your First Name: ', name => {
-        console.log(`Hey there ${name}!`);
-        readline.close();
-      });
-  }
-
-  takeInput();
-  takeInput();*/
