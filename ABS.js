@@ -135,3 +135,10 @@ console.log('-------------');
 place='City';
 addressBook.forEach((contact)=>{if(contact.city==place || contact.state==place) console.log(contact);});
 console.log('-------------');
+
+//UC10 Ability to get number of contact persons i.e. count by City or State
+console.log('-------------');
+place='State'
+let countOfContacts=addressBook.reduce((totalCount,contact)=>{if(contact.state==place || contact.city==place) totalCount+=1},0);
+console.log('The count of contacts is: '+countOfElements);
+console.log('-------------');
