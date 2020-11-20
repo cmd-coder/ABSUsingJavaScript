@@ -129,3 +129,9 @@ console.log('-------------');
 let place='City';
 addressBook.forEach((contact)=>{if(contact.city==place || contact.state==place) console.log(contact);});
 console.log('-------------');
+
+//UC9 Ability to view Person in a particularCity or State
+console.log('-------------');
+place='City';
+addressBook.forEach((contact)=>{if(contact.city==place || contact.state==place) console.log(contact);});
+console.log('-------------');
