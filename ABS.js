@@ -142,3 +142,10 @@ place='State'
 let countOfContacts=addressBook.reduce((totalCount,contact)=>{if(contact.state==place || contact.city==place) totalCount+=1},0);
 console.log('The count of contacts is: '+countOfElements);
 console.log('-------------');
+
+//UC11 Ability to sort the entries in the address book alphabetically by Person’s name
+console.log('-------------');
+addressBook.sort((contact1, contact2)=>contact1.firstName-contact2.firstName);
+console.log('Sorting by name');
+console.log(addressBook);
+console.log('-------------');
