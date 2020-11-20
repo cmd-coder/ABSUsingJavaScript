@@ -106,3 +106,7 @@ addressBook.forEach((contact)=>
 {
     console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
 });
+
+//UC6 Ability to find number of contacts in the address book
+let countOfElements=addressBook.reduce((totalCount)=>totalCount+=1,0);
+console.log('The count of elements is: '+countOfElements);
