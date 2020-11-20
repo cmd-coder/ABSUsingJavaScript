@@ -110,3 +110,16 @@ addressBook.forEach((contact)=>
 //UC6 Ability to find number of contacts in the address book
 let countOfElements=addressBook.reduce((totalCount)=>totalCount+=1,0);
 console.log('The count of elements is: '+countOfElements);
+
+//UC7 Ability to ensure there is no Duplicate Entry of the same Person in the Address Book
+console.log('-------------');
+let newContact=new Contact('Firstone','Last', 'Address', 'City','State','455 645','7889455678','email@email.com');
+if(addressBook.find(contact=>{return contact.firstName=='First';}).firstName!='Firstone')
+    addressBook.push(newContact);
+else
+    console.log('This contact is already present');
+console.log('-------------');
+addressBook.forEach((contact)=>
+{
+    console.log(contact.firstName+" -- "+contact.lastName+" -- "+contact.address+" -- "+contact.city+" -- "+contact.state+" -- "+contact.zip+" -- "+contact.phone+" -- "+contact.email);
+});
